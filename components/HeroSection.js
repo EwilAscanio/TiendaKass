@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ArrowRight, ShoppingBag, Sparkles, Zap, Star, Play } from 'lucide-react';
+import Link from 'next/link';
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -187,6 +188,7 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12"
               style={{ transform: `translateY(${scrollY * -0.02}px)` }}
             >
+              <Link href="#todoslosproductos">
               <button className="group relative bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 overflow-hidden">
                 <div className="relative z-10 flex items-center space-x-2">
                   <ShoppingBag className="h-6 w-6 group-hover:rotate-12 transition-transform duration-300" />
@@ -196,15 +198,18 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-yellow-300 blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500 scale-150" />
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-200 to-orange-300 blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-700 scale-200" />
               </button>
+              </Link>
               
+              <Link href="#ofertasespeciales">
               <button className="group relative border-2 border-white/50 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 backdrop-blur-sm overflow-hidden">
                 <div className="relative z-10 flex items-center space-x-2">
                   <Play className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                  <span>Ver Demo</span>
+                  <span>Ofertas Especiales</span>
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
+              </Link>
             </div>
 
             {/* Enhanced stats */}

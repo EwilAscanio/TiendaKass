@@ -98,10 +98,12 @@ export default function Home() {
           {!searchQuery && !selectedCategory && (
             <>
               {/* Products on Sale */}
+              <div id="ofertasespeciales">
               <ProductGrid 
                 products={productsOnSale} 
                 title="🔥 Ofertas Especiales"
               />
+              </div>
 
               {/* Best Sellers */}
               <ProductGrid 
@@ -110,10 +112,12 @@ export default function Home() {
               />
 
               {/* All Products */}
+              <div id="todoslosproductos">
               <ProductGrid 
                 products={products} 
                 title="📦 Todos los Productos"
               />
+              </div>
             </>
           )}
         </main>

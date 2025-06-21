@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ArrowRight, Star, Shield, Truck, HeadphonesIcon } from 'lucide-react';
+import Link from 'next/link';
 
 const ParallaxSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -323,6 +324,7 @@ const ParallaxSection = () => {
           className="text-center"
           style={{ transform: `translateY(${scrollY * -0.02}px)` }}
         >
+          <Link href="#todoslosproductos">
           <button className="group relative bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl overflow-hidden">
             <div className="relative z-10 flex items-center space-x-2">
               <span>Explorar Productos</span>
@@ -335,6 +337,7 @@ const ParallaxSection = () => {
             <div className="absolute top-2 left-4 w-1 h-1 bg-white rounded-full opacity-0 group-hover:opacity-100 animate-ping transition-opacity duration-500" />
             <div className="absolute bottom-2 right-6 w-1 h-1 bg-white rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-500" style={{ animationDelay: '0.3s' }} />
           </button>
+          </Link>
         </div>
       </div>
 

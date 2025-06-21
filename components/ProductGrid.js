@@ -18,7 +18,7 @@ const ProductGrid = ({ products, title }) => {
   }
 
   return (
-    <div className="mb-12">
+    <div className="mb-12" >
       {title && (
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
           {title}
